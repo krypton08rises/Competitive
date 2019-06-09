@@ -10,16 +10,11 @@ public:
         par.insert(pair<char, char>('[', ']'));
 
         while(i<s.length()){
-            if(s[i]=='(' || s[i]=='{' || s[i]=='[')
-                check = 1;
-            if(s[i]==')' || s[i]=='}' || s[i]==']')
-                check = 2;
-            if(check==1){
+            if(s[i]=='(' || s[i]=='{' || s[i]=='['){
                 ++k;
                 prev[k] = s[i];
-
             }
-            if(check==2){
+            if(s[i]==')' || s[i]=='}' || s[i]==']'){
                 if(s[i]!=par[prev[k]])
                     return false;
                 k--;
