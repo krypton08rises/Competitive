@@ -14,8 +14,10 @@ public:
             if(conv[s[i]]<conv[s[i+1]]){
                 sum+=(conv[s[i+1]]-conv[s[i]]);
                 continue;
+                i+=2;
             }
             sum+=conv[s[i]];
+            i++;
         }
 
         return sum;
