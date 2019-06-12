@@ -16,9 +16,9 @@ public:
                         index = it2-nums.begin();
                             break;
                     }
-                    if(*it1>*(it1+it2)/2)
+                    if(*it1>*((it1+it2)/2))
                         it2 = (it1+it2)/2;
-                    else if(*it2<*(it1+it2)/2)
+                    else if(*it2<*((it1+it2)/2))
                         it1 = (it1+it2)/2;
                 }
         }
