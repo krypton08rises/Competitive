@@ -3,15 +3,12 @@
 #include<string>
 using namespace std;
 
-int main()
-{
-    int n,t,c,i,j;
+int main(){
+
+    int n,t,c,i,j,num;
+    vector <string> str;
 
     cin>>t;
-
-    int num;
-    vector <int> v;
-    vector <string> str;
 
     for(i=0;i<t;i++){
 
@@ -20,24 +17,16 @@ int main()
 
             for(j=0;j<n;j++){
                         cin>>num;
-                        v.push_back(num);
+                        sum+=num;
                     }
 
-            for(j=0;j<v.size();j++){
-                        sum+=v[j];
-            }
-
             if(sum<=c)
-
                     str[i]="yes";
-
-            else
-
-                    str[i]="no";
-            v.clear();
+                else
+                        str[i]="no";
         }
 
-        for(i=0;i<str.size();i++)
+        for(i=0;i<t;i++)
                 cout<<str[i]<<endl;
 
     }

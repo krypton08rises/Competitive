@@ -3,23 +3,33 @@
 #include<string>
 using namespace std;
 
-int main()
-{
-    int n,t,c;
+int main(){
+    int num,sum=0,n=3;
+/*
+    int n,t,c,i,j,num;
+    vector <string> str;
+
     cin>>t;
-    string str;
-      for(int i=0;i<t;i++){
-        cin>>n>>c;
-        vector <int> v;
-        getline(cin,str);
-        for(int i=0,j=0;i<str.size();i++){
-            if(str[i]!=' '){
-                v[j]=str[i];
-                j++;
-            }
+
+    for(i=0;i<t;i++){
+
+            int sum=0;
+            cin>>n>>c;
+*/
+            for(int j=0;j<n;j++){
+                        cin>>num;
+                        sum+=num;
+                    }
+                    cout<<sum;
+/*
+            if(sum<=c)
+                    str[i]="yes";
+                else
+                        str[i]="no";
         }
-        for(int i=0;i<vector.size();i++){
-            cout<<v[i];
-        }
+
+        for(i=0;i<t;i++)
+                cout<<str[i]<<endl;
+*/
     }
-}
+
