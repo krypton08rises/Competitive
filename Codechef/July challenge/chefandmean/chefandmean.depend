@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1562355423 source:d:\practise cpp\chefandmean\main.cpp
+	<iostream>
+	<vector>
+
