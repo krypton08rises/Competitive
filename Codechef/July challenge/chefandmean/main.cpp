@@ -4,8 +4,9 @@ using namespace std;
 
 int main()
 {
-    int t,n,i,j,sum;
-    float temp1;
+    int t,n,i,j;
+    long long sum;
+    float temp1,temp2;
     cin>>t;
     vector<long long> res,v;
     for(i=0;i<t;i++){
@@ -17,10 +18,11 @@ int main()
                 cin>>v[j];
                 sum+=v[j];
         }
-        temp1 = static_cast<float>(sum);
         for(j=0;j<n;j++){
-            if(temp1/n==((temp1-v[j])/(n-1))){
-                res[i] = v[j];
+                temp1 = (float(sum)/n);
+                temp2 = (float(sum-v[j])/(n-1));
+            if(temp1==temp2){
+                res[i] = j+1;
                 j=-1;
                 break;
             }
