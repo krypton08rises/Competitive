@@ -6,38 +6,56 @@ using namespace std;
 int isevenones(int);
 
 int main(){
-        int t,i,j,q,k,l=0,evensum,oddsum;
-        cin>>t;
+        int t,i,j,q,k,temp,evensum,oddsum,l=0;
         map<int, int> map1;
-        vector<int> res,v;
+        vector<int> v,res;
+        cin>>t;
         for(i=0;i<t;i++){
-            cin>>q;
-            for(j=0;j<q;j++){
+
+                cin>>q;
                 evensum=0;
                 oddsum=0;
-                v.push_back(0);
-                res.push_back(0);
-                if(map[v[j]!=v[j])
-                map1.insert(pair<int, int>(v[j],v[j]));
+                for(j=0;j<q;j++){
 
-                }
-            for(k=0;k<j;k++){
-                   res[]
+                        v.push_back(0);
+                        res.push_back(0);
+                        cin>>v[j];
+
+                        if(map1[v[j]!=v[j])
+                                map1.insert(pair<int, int>(v[j],v[j]));
+                        else v.erase(j);
+                    }
+
+                     for(k=0,j=0;k<j;k++,l+=2,j++){
+                                temp = v[k]^v[j];
+
+                                if(map1[temp]==temp){
+                                        map1.insert(pair<int,int>(temp,temp));
+                                        if(isevenones(temp))
+                                                evensum++;
+                                            else
+                                                    oddsum++;
+                                    }
+                                    cout<<evensum<<" "<<oddsum<<"\n";
+                            }
+
             }
-        }
 }
 
-int isevenones(int num){
+
+int evenones(int num){
     int count=1;
+
         if(num==0)
             return 1;
+
         if(ceil(log2(num)) == floor(log2(num)))
-                return 0;
-                else {
-                        while(num!=0){
-                            num-=pow(2,floor(log2(num)));
-                            count++;
-                        }
-                }
-                (count%2==0)?return 1:return 0;
+                return log2(num);
+            else {
+                while(num!=0){
+                        num-=pow(2,floor(log2(num)));
+                        count++;
+                    }
+            }
+                (count%2==0)?return 1:return 0 ;
         }
