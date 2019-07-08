@@ -1,29 +1,33 @@
 #include <iostream>
 #include <vector>
 #include <math.h>
+#include <map>
 using namespace std;
 
-int isevenones(int);
+int isevenones(int n);
 
 int main(){
         int t,i,j,q,k,temp,evensum,oddsum,l=0;
         map<int, int> map1;
         vector<int> v,res;
         cin>>t;
+        vector<int>::iterator it=v.begin();
+
         for(i=0;i<t;i++){
 
                 cin>>q;
                 evensum=0;
                 oddsum=0;
-                for(j=0;j<q;j++){
+                for(j=0;j<q;j++,it++){
 
                         v.push_back(0);
                         res.push_back(0);
                         cin>>v[j];
 
-                        if(map1[v[j]!=v[j])
+                        if(map1[v[j]]!=v[j])
                                 map1.insert(pair<int, int>(v[j],v[j]));
-                        else v.erase(j);
+
+                        else v.erase(it);
                     }
 
                      for(k=0,j=0;k<j;k++,l+=2,j++){
@@ -31,6 +35,10 @@ int main(){
 
                                 if(map1[temp]==temp){
                                         map1.insert(pair<int,int>(temp,temp));
+                                        if(isevenones(v[j]))
+                                                evensum++;
+                                            else
+                                                    oddsum++;
                                         if(isevenones(temp))
                                                 evensum++;
                                             else
@@ -57,5 +65,7 @@ int evenones(int num){
                         count++;
                     }
             }
-                (count%2==0)?return 1:return 0 ;
+                if(count%2==0)
+                    return 1;
+                return 0;
         }
