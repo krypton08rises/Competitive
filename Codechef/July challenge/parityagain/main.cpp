@@ -22,30 +22,25 @@ int main(){
                             v.push_back(0);
                             cin>>v[j];
                     }
-                    vector<int>::iterator ip;
-                            ip = std::unique(v.begin(), v.begin() + j);
-                            v.resize(std::distance(v.begin(), ip));
-
 
                 for(j=0;j<q;j++){
                                 res.push_back(0);
                                 res[l] = v[j];
                                 l++;
-                                if(isevenones(v[j]))
+                                if(isevenones(v[j])==1)
                                                 evensum++;
-                                            else
+                                            else if(isevenones(res[l])==0)
                                                     oddsum++;
                                 for(k=0;k<j;k++){
                                             res.push_back(0);
                                             res[l] = res[k]^v[j];
-                                            if(isevenones(res[l])==0)
+                                            if(isevenones(res[l])==1)
                                                         evensum++;
-                                                    else
+                                                    else if(isevenones(res[l])==0)
                                                             oddsum++;
                                                 l++;
-                                }
+                                    }
                                     cout<<evensum<<" "<<oddsum<<"\n";
-
                         }
             }
 }
@@ -64,6 +59,6 @@ int isevenones(int num){
                         num-=pow(2,floor(log2(num)));
                         count++;
                     }
-            }
-                return (count%2==0)? 1 : 0 ;
+                }
+            return (count%2==0)? 1 : 0 ;
         }

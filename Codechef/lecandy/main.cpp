@@ -11,7 +11,7 @@ int main(){
     cin>>t;
 
     for(i=0;i<t;i++){
-            str.push_back("");
+            str.push_back(" ");
             sum=0;
             cin>>n>>c;
             for(int j=0;j<n;j++){
