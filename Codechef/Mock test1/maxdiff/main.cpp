@@ -11,6 +11,10 @@ int main()
     for(i=0;i<t;i++){
         sum.push_back(0);
         cin>>n>>k;
+        if(n<k){
+            sum[i] = 0;
+            break;
+        }
         for(j=0;j<n;j++){
             w.push_back(0);
             cin>>w[j];
