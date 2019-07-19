@@ -20,9 +20,9 @@ int main(){
                     }
 
             if(sum<=c)
-                    str[i]="yes";
+                    str[i]="Yes";
                 else
-                        str[i]="no";
+                        str[i]="No";
         }
 
         for(i=0;i<t;i++)
