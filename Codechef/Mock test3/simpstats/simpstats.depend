@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1563627344 source:d:\study material\competitive\simpstats\main.cpp
-	<iostream>
-	<vector>
-	<algorithm>
-	<iomanip>
-

@@ -1,7 +1,0 @@
-# depslib dependency file v1.0
-1563368215 source:d:\study material\competitive\codechef\mock test1\lapindromes\main.cpp
-	<iostream>
-	<string>
-	<vector>
-	<bits/stdc++.h>
-
