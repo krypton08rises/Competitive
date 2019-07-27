@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1564244513 source:d:\study material\competitive\codechef\random problems\sfrv\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
