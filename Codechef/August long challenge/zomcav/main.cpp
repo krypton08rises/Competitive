@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     int t,i,n,j,k,temp1,temp2;
-    vector<int> c,h,rad;
+    vector<long long int> c,h,rad;
     vector<string> res;
     cin>>t;
     for(i=0;i<t;i++){
