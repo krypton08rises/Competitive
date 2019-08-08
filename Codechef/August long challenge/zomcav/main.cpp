@@ -26,7 +26,7 @@ int main()
 
         for(j=0;j<n;j++){
             temp1 = (j+1-c[j]>0)?j+1-c[j]:0;
-            temp2 = (j+1+c[j]<n)?j+1+c[j]:n;
+            temp2 = (j+1+c[j]<n+1)?j+1+c[j]:n;
             for(k=temp1;k<temp2;k++){
                 rad[k]++;
             }
