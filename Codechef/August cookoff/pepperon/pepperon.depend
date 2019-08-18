@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1566152959 source:d:\study material\competitive\pepperon\main.cpp
+	<iostream>
+	<vector>
+	<string>
+

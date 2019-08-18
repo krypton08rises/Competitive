@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1566146417 source:d:\study material\competitive\coke\main.cpp
+	<iostream>
+	<vector>
+	<climits>
+
