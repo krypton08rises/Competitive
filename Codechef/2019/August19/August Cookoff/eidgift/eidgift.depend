@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1567264351 source:d:\study material\competitive\eidgift\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
