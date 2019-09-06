@@ -3,14 +3,14 @@
 using namespace std;
 
 #define NIL -1
-#define MAX 100
+vector<int> lookup;
 
-int lookup[MAX];
-void _initialize()
+void _initialize(int n)
 {
-    int i;
-    for (i = 0; i < MAX; i++)
-        lookup[i] = NIL;
+    for (int i = 0; i < n; i++)
+    {
+            lookup.push_back(NIL);
+    }
 }
 
 int fib(int n)
@@ -29,7 +29,6 @@ return lookup[n];
 int main()
 {
 
-    _initialize();
     int t,i,n,temp;
     cin>>t;
     vector<int> ans;
@@ -37,6 +36,7 @@ int main()
     {
         ans.push_back(0);
         cin>>n;
+        _initialize(n);
         if(n==1)
         {
             return 0;
@@ -50,6 +50,7 @@ int main()
         ans[i] = fib(pow(2,int(log2(n)))-1);
         temp = pow(10,int(log10(ans[i])));
         ans[i] = ans[i]%temp;
+        lookup.clear();
     }
     for(i=0;i<t;i++)
     {
