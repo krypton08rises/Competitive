@@ -29,7 +29,7 @@ return lookup[n];
 int main()
 {
 
-    int t,i,n,temp;
+    int t,i,n;
     cin>>t;
     vector<int> ans;
     for(i=0;i<t;i++)
@@ -41,15 +41,13 @@ int main()
         {
             return 0;
         }
-        /*
-        if(n==1)
-            ans[i] = 0;
         if(n==2)
-            ans[i] = 1;
-        */
+        {
+             ans[i] = 1;
+             continue;
+        }
         ans[i] = fib(pow(2,int(log2(n)))-1);
-        temp = pow(10,int(log10(ans[i])));
-        ans[i] = ans[i]%temp;
+        ans[i]%=10;
         lookup.clear();
     }
     for(i=0;i<t;i++)
