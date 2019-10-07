@@ -3,17 +3,17 @@
 using namespace std;
 
 #define NIL -1
-vector<int> lookup;
+vector<long long int> lookup;
 
-void _initialize(int n)
+void _initialize(long long int n)
 {
-    for (int i = 0; i < n; i++)
+    for (long long int i = 0; i < n; i++)
     {
             lookup.push_back(NIL);
     }
 }
 
-int fib(int n)
+long long int fib(long long int n)
 {
     if (lookup[n] == NIL)
     {
@@ -29,7 +29,8 @@ return lookup[n];
 int main()
 {
 
-    int t,i,n;
+    int t,i;
+    long long int n;
     cin>>t;
     vector<int> ans;
     for(i=0;i<t;i++)
@@ -46,7 +47,7 @@ int main()
              ans[i] = 1;
              continue;
         }
-        ans[i] = fib(pow(2,int(log2(n)))-1);
+        ans[i] = fib(pow(2,(long long)(log2(n)))-1);
         ans[i]%=10;
         lookup.clear();
     }
